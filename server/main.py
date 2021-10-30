@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from server.config import settings
-from server.routes import router
+from server.routers import router
 
 app = FastAPI(
     title=settings.get("PROJECT_NAME"),
