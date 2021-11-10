@@ -25,6 +25,8 @@ Requerimentos:
 - [Docker](https://docs.docker.com/get-docker/)
 - [Docker Compose](https://docs.docker.com/compose/install/)
 
+Após isso é só utilizar o comando do Makefile para iniciar o container do Docker:
+
 ```sh
 make docker/start
 ```
