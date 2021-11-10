@@ -18,6 +18,17 @@ poetry shell
 poetry install
 ```
 
+## Running
+
+Requerimentos:
+
+- [Docker](https://docs.docker.com/get-docker/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+
+```sh
+make docker/start
+```
+
 ## Settings
 
 - Settings to use in VS Code:
