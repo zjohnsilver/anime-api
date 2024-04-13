@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+
 from server.config import settings
 from server.routers import router
 

@@ -16,4 +16,4 @@ install-deps:
 	poetry install
 
 local-run:
-	uvicorn server.main:app --port 8000 --reload --host 0.0.0.0
+	uvicorn server.main:app --port 8000 --reload
