@@ -515,5 +515,5 @@ standard = ["PyYAML (>=5.1)", "colorama (>=0.4)", "httptools (==0.2.*)", "python
 
 [metadata]
 lock-version = "2.0"
-python-versions = "^3.10"
-content-hash = "000416b67dbe4c34b6b4068869ba174c3b544743a5e9a002c906e5a424e85201"
+python-versions = "^3.12"
+content-hash = "e80cf4d4eb6dc5b0217955f6395384795b899d8a50ac3d2f4aa589805b7dc75e"
