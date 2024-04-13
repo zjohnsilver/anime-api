@@ -1,5 +1,10 @@
-from dynaconf import Dynaconf
+from pydantic_settings import BaseSettings, SettingsConfigDict
 
-settings = Dynaconf(
-    settings_files=["settings.toml"], environments=True, load_dotenv=True
-)
+
+class Settings(BaseSettings):
+    model_config = SettingsConfigDict(case_sensitive=True, env_file=".env")
+
+    project_name: str = "Anime API"
+
+
+settings = Settings()

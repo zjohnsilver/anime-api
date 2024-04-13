@@ -4,7 +4,7 @@ from server.config import settings
 from server.routers import router
 
 app = FastAPI(
-    title=settings.get("PROJECT_NAME"),
+    title=settings.project_name,
 )
 
 
