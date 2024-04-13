@@ -11,6 +11,7 @@ fastapi = "~0.110.1"
 uvicorn = "~0.29.0"
 dynaconf = "^3.1.7"
 pydantic = "~2.7.0"
+pydantic-settings = "~2.2.1"
 
 [tool.poetry.dev-dependencies]
 flake8 = "4.0.1"
