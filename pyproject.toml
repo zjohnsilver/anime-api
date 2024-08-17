@@ -1,21 +1,25 @@
-[tool.poetry]
+[project]
 name = "anime-api"
 version = "0.1.0"
-description = ""
-authors = ["John Silver"]
-package-mode = false
-
-[tool.poetry.dependencies]
-python = "~3.12"
-fastapi = "~0.110.1"
-uvicorn = "~0.29.0"
-pydantic = "~2.7.0"
-pydantic-settings = "~2.2.1"
-
-[tool.poetry.dev-dependencies]
-flake8 = "4.0.1"
-black = "21.9b0"
+description = "Add your description here"
+authors = [{ name = "John Silver", email = "johncarlosilver@gmail.com" }]
+dependencies = [
+    "fastapi[standard]>=0.112.1",
+    "pydantic-settings>=2.4.0",
+]
+readme = "README.md"
+requires-python = ">= 3.12"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["server"]
