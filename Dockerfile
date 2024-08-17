@@ -1,14 +1,12 @@
-FROM python:3.10.0-slim-buster
+FROM python:3.12.0-slim
 
 WORKDIR /server
 
-COPY pyproject.toml .
-COPY poetry.lock .
+ENV PYTHONUNBUFFERED=1 
 
-RUN pip install poetry==1.1.11
+COPY requirements.lock requirements-dev.lock ./
 
-RUN poetry config virtualenvs.create false
-
-RUN poetry install
-
-COPY . .
+RUN sed '/-e/d' requirements.lock > requirements.txt && \
+    sed '/-e/d' requirements-dev.lock > requirements.dev.txt && \
+    pip install --no-cache-dir -r requirements.txt -r requirements.dev.txt && \
+    rm requirements.txt requirements.dev.txt
